@@ -1,0 +1,1 @@
+If you encounter any trouble trying to run the website, contact me (Rijad Aljovic, 061 653 603) so that i can bring my laptop (on which the site was made) to show you how it runs in real time, takodjer medical-portal je naziv foldera jer se tako trebala zvati stranica ali smo promijenili ime

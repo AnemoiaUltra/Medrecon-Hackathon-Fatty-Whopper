@@ -1,0 +1,415 @@
+.navbar {
+  background-color: #212121;
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.navbar-logo {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #dafddd;
+  cursor: pointer;
+}
+
+.mode-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 200px;
+  flex-shrink: 0;
+}
+
+.switch-track {
+  background-color: #1e1e20;
+  border-radius: 999px;
+  width: 120px;
+  height: 36px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  transition: background-color 0.3s ease;
+  font-size: 0.9rem;
+  color: #ccc;
+  user-select: none;
+}
+
+.switch-label {
+  z-index: 2;
+  pointer-events: none;
+}
+
+.switch-knob {
+  position: absolute;
+  top: 3px;
+  width: 48%;
+  height: 30px;
+  background-color: #3f3f46;
+  border-radius: 999px;
+  transition: left 0.3s ease;
+  z-index: 1;
+}
+
+.switch-knob.patient {
+  left: 3px;
+}
+
+.switch-knob.doctor {
+  left: calc(100% - 3px - 48%);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+body {
+  background: #c0c0c0; 
+  font-family: Raleway, sans-serif;
+  color: #666;
+  padding-top: 90px;
+}
+
+.login {
+  margin: 20px auto 20px auto;
+  padding: 40px 50px;
+  max-width: 480px;
+  border-radius: 0px;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  font-family: 'Raleway', sans-serif;
+  color: #334e68;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.login-form-fields {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.login h2 {
+  margin-bottom: 24px;
+  color: #102a43;
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-align: center;
+}
+
+.login input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border: 2px solid #bcccdc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+.login input:focus {
+  border-color: #dafddd;
+  box-shadow: 0 0 6px #dafddd;
+}
+
+.login button {
+  width: 100%;
+  padding: 14px 0;
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #77A58A;
+  background-color: #dafddd;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.login button:hover {
+  background-color: #77A58A;
+  color: #ffffff;
+}
+
+.login button:active {
+  background-color: #dafddd;
+}
+
+.login button + button {
+  margin-top: 12px;
+  background-color: transparent;
+  border: 2px solid #dafddd;
+  color: #77A58A;
+}
+
+.login button + button:hover {
+  background-color: #77A58A;
+  color: #dafddd;
+}
+
+.links {
+  display: table;
+  width: 100%;  
+  box-sizing: border-box;
+  border-top: 1px solid #c0c0c0;
+  margin-bottom: 10px;
+}
+
+.links a {
+  display: table-cell;
+  padding-top: 10px;
+  cursor: pointer;
+  color: #EF5350;
+}
+
+.links a:first-child {
+  text-align: left;
+}
+
+.links a:last-child {
+  text-align: right;
+}
+
+.login h2,
+.login p,
+.login a {
+  text-align: center;    
+}
+
+.login a {
+  text-decoration: none;  
+  font-size: .8em;
+}
+
+.login a:visited {
+  color: inherit;
+}
+
+.login a:hover {
+  text-decoration: underline;
+} 
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+button, 
+input[type="button"], 
+input[type="submit"], 
+button.buy-button, 
+button.buy-button2 {
+  position: relative;
+  display: inline-block;
+  padding: 12px 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal !important;
+  font-style: normal;
+  letter-spacing: 1px;
+  color: #77A58A;
+  background-color: rgba(160, 147, 179, 0.1);
+  border: 2px solid #dafddd
+  ;
+  border-radius: 5px;
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  transform: skewX(-4deg);
+  user-select: none;
+  outline: none;
+}
+
+button::before,
+button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background-color: rgba(218, 253, 221, 0.3);
+  z-index: 0;
+  transition: transform 0.3s ease;
+}
+
+button::before {
+  left: 0;
+  transform: translateY(-100%) skewX(-10deg);
+}
+
+button::after {
+  right: 0;
+  transform: translateY(100%) skewX(10deg);
+}
+
+button:hover::before {
+  transform: translateY(0) skewX(0deg);
+}
+
+button:hover::after {
+  transform: translateY(0) skewX(0deg);
+}
+
+button:hover {
+  background-color: rgba(218, 253, 221, 0.5);
+  color:  #77A58A;
+}
+
+button:focus {
+  box-shadow: 0 0 8px #dafddd;
+}
+
+a.button {
+  position: relative;
+  display: inline-block;
+  padding: 12px 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #dafddd;
+  background-color: rgba(218, 253, 221, 0.2);
+  border: 2px solid #dafddd;
+  border-radius: 5px;
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  transform: skewX(-4deg);
+  user-select: none;
+  text-decoration: none;
+  outline: none;
+  z-index: 1;
+}
+
+a.button::before,
+a.button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background-color: rgba(218, 253, 221, 0.5);
+  z-index: 0;
+  transition: transform 0.3s ease;
+}
+
+a.button::before {
+  left: 0;
+  transform: translateY(-100%) skewX(-10deg);
+}
+
+a.button::after {
+  right: 0;
+  transform: translateY(100%) skewX(10deg);
+}
+
+a.button:hover::before {
+  transform: translateY(0) skewX(0deg);
+}
+
+a.button:hover::after {
+  transform: translateY(0) skewX(0deg);
+}
+
+a.button:hover {
+  background-color: rgba(218, 253, 221, 0.5);
+  color: #1f1f1f;
+}
+.toggle-switch {
+  position: relative;
+  width: 100px;
+  height: 40px;
+  background: #444;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+.toggle-thumb {
+  height: 32px;
+  width: 48px;
+  background-color: #dafddd;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 4px;
+}
+
+.toggle-thumb.patient {
+  left: 4px;
+}
+
+.toggle-thumb.doctor {
+  right: 4px;
+}
+
+.toggle-labels {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 1;
+  color: #dafddd !important;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 0 10px;
+}
+.doctor-search-form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.doctor-search-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 2px solid #dafddd;
+  border-radius: 8px;
+  background-color: #f0f4f8;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doctor-search-input:focus {
+  border-color: #77A58A;
+  box-shadow: 0 0 6px #77A58A;
+}
+
+.doctor-search-button {
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #77A58A;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.doctor-search-button:hover {
+  background-color: #5c866b;
+}
+
+.doctor-search-input {
+  max-width: 300px;
+  margin: 0 auto;
+  display: block;
+}
